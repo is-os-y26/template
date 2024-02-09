@@ -23,8 +23,14 @@ jobs:
           do
             echo COMPOSE_PROJECT_NAME=is-os-${{ steps.repo-name.outputs.repository-name }}
           done
+      
+      - name: add changes to index
+        run: |
+          git add -A
           
       - name: commit & push changes
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: 'master'
+          message: 'chore: updated .env'
