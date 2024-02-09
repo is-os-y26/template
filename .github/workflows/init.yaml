@@ -7,9 +7,6 @@ jobs:
   change-docker-compose-env:
     runs-on: ubuntu-latest
 
-    permissions:
-      content: write
-
     steps:
       - name: checkout repository
         uses: actions/checkout@v3
