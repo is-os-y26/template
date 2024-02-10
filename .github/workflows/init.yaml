@@ -19,6 +19,7 @@ jobs:
         uses: MariachiBear/get-repo-name-action@v1.1.0
         with:
           with-owner: 'false'
+          string-case: 'lowercase'
 
       - name: change .env file
         run: |
